@@ -1,5 +1,3 @@
 - ### code snippets
-- ### Systems & apps 
-	- settings
-	- configurations
+- ### Systems & apps configurations
 
