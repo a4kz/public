@@ -1,3 +1,15 @@
+### 更改默认分支名
+
+```
+git config --global init.defaultBranch main
+```
+
+```
+# 已有的master改成main
+git branch -m main
+```
+
+
 ```
 git config --global user.name "kevin"
 git config --global user.email "kevin@example.com"
