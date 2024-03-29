@@ -18,6 +18,18 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 source ~/.zshrc
 ```
 
+### homebrew update
+
+```
+brew update
+```
+
+### oh-my-zsh installation
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ### oh-my-zsh update
 
 ```
