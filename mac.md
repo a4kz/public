@@ -24,6 +24,14 @@ source ~/.zshrc
 brew update
 ```
 
+### 查找 homebrew 安装程序的路径
+
+```
+brew list python
+```
+
+
+
 ### oh-my-zsh installation
 
 ```
