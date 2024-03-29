@@ -10,7 +10,7 @@ hd -> library ->preferences -> systemconfiguration ->
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### homebrew update
+### oh-my-zsh update
 
 ```
 omz update
@@ -24,4 +24,12 @@ brew install zsh-autosuggestions
 #### `vi ~/.zshrc`
 ```
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
+
+### homebrew stop auto update
+```
+# ~/.zshrc
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+source ~/.zshrc
 ```
