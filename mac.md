@@ -54,3 +54,9 @@ brew install zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
+### VSCode安装vim插件后，不能响应长按的问题解决
+
+```
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
+
