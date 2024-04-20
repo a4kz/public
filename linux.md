@@ -72,3 +72,23 @@ wget -qO- https://get.casaos.io | sudo bash
 casaos-uninstall
 ```
 
+### Debian ipv4 自动消失问题的解决
+
+```
+vi /etc/network/interfaces
+```
+
+```
+iface enp0s3 inet static
+address 192.168.1.183
+netmask 255.255.255.0
+gateway 192.168.1.1
+dns-nameservers 1.1.1.1
+```
+
+__保存并退出__
+
+```
+systemctl restart networking.service
+```
+
