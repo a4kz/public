@@ -86,7 +86,7 @@ gateway 192.168.1.1
 dns-nameservers 1.1.1.1
 ```
 
-__保存并退出__
+__保存并退出后：__
 
 ```
 systemctl restart networking.service
