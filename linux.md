@@ -1,4 +1,5 @@
 ### 安装 oh-my-zsh / linux 和 mac都适用
+__如果系统时间不正确，那么 apt 将无法更新__
 ```
 apt update
 ```
