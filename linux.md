@@ -62,6 +62,15 @@ date -s  "YYYY/MM/DD hh:mm:ss"
 date -s "2024/04/09 16:06:32"
 ```
 
+__其他修改时间方法__
+
+```
+timedatectl
+timedatectl list-timezone
+timedatectl list-timezone | grep AAA
+timedatectl set-timezone AAA/XYZ
+```
+
 ### CasaOS
 
 ```
@@ -73,6 +82,8 @@ casaos-uninstall
 ```
 
 ### Debian ipv4 自动消失问题的解决
+
+#### 某些设备只能通过DHCP静态的方式修改，以下方法将不起作用
 
 ```
 vi /etc/network/interfaces
