@@ -56,3 +56,7 @@ $env:SCOOP_GLOBAL='F:\scoop_apps'
 ```
 scoop install -g <app>
 ```
+
+### Windows 11 installation skip connect wifi
+- <shift + [fn] + F10>
+- `OOBE\BYPASSNRO`

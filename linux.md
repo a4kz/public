@@ -1,4 +1,5 @@
 ### 安装 oh-my-zsh / linux 和 mac都适用
+__如果系统时间不正确，那么 apt 将无法更新__
 ```
 apt update
 ```
@@ -61,6 +62,15 @@ date -s  "YYYY/MM/DD hh:mm:ss"
 date -s "2024/04/09 16:06:32"
 ```
 
+__其他修改时间方法__
+
+```
+timedatectl
+timedatectl list-timezone
+timedatectl list-timezone | grep AAA
+timedatectl set-timezone AAA/XYZ
+```
+
 ### CasaOS
 
 ```
@@ -69,5 +79,27 @@ wget -qO- https://get.casaos.io | sudo bash
 
 ```
 casaos-uninstall
+```
+
+### Debian ipv4 自动消失问题的解决
+
+#### 某些设备只能通过DHCP静态的方式修改，以下方法将不起作用
+
+```
+vi /etc/network/interfaces
+```
+
+```
+iface enp0s3 inet static
+address 192.168.1.183
+netmask 255.255.255.0
+gateway 192.168.1.1
+dns-nameservers 1.1.1.1
+```
+
+__保存并退出后：__
+
+```
+systemctl restart networking.service
 ```
 
