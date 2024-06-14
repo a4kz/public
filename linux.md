@@ -103,3 +103,24 @@ __保存并退出后：__
 systemctl restart networking.service
 ```
 
+### 给 `yum` / `dnf` 设置代理, 设置`/etc/environment`不起作用
+
+```
+# /etc/dnf/dnf.conf
+# global
+proxy=http://a.b.c.d:e/
+
+# optional
+proxy_username=ffff
+proxy_password=gggg
+```
+```
+# user level
+# .bash_profile
+
+export http_proxy=http://a.b.c.d:e/
+export https_proxy=Http://a.b.c.d:e/
+
+export http_proxy=http://username:password@a.b.c.d:e/
+```
+
