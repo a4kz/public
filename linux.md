@@ -48,6 +48,31 @@ hostnamectl
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 ```
 
+### 设置 docker 代理
+
+```
+mkdir /etc/systemd/system/docker.service.d
+```
+#### 创建文件 `/etc/systemd/system/docker.service.d/http-proxy.conf `
+```
+[Service]
+Environment="HTTP_PROXY=http://proxy.example.com:80/"
+Environment="HTTPS_PROXY=http://proxy.example.com:80/"
+Environment="NO_PROXY=localhost,127.0.0.0/8,docker-registry.somecorporation.com"
+```
+```
+systemctl daemon-reload
+```
+```
+systemctl show --property Environment docker
+```
+
+```
+systemctl restart docker
+```
+
+
+
 ### 设置代理 `/etc/environment`
 
 ```
