@@ -105,8 +105,8 @@ __其他修改时间方法__
 
 ```
 timedatectl
-timedatectl list-timezone
-timedatectl list-timezone | grep AAA
+timedatectl list-timezones
+timedatectl list-timezones | grep AAA
 timedatectl set-timezone AAA/XYZ
 ```
 
