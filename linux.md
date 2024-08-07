@@ -162,4 +162,9 @@ export https_proxy=Http://a.b.c.d:e/
 
 export http_proxy=http://username:password@a.b.c.d:e/
 ```
+### Kali enable ssh
+```
+# /etc/ssh/sshd_config
 
+PermitRootLogin yes
+```
