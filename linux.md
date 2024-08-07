@@ -169,7 +169,7 @@ export http_proxy=http://username:password@a.b.c.d:e/
 PermitRootLogin yes
 ```
 
-### debian 
+### debian 12 sources.list
 
 ```
 deb https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
