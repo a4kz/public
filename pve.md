@@ -27,5 +27,6 @@ But, I faced the following problem.
 
 
 I was not able to boot after following these fantastic instructions. I had to go to Options to change the Boot Order.
-Original: Options > Boot Order > ide2, net0
-Modified: Options > Boot Order > virtio0, ide2, net0
+
+- Original: Options > Boot Order > ide2, net0
+- Modified: Options > Boot Order > virtio0, ide2, net0
