@@ -23,3 +23,9 @@ But, I faced the following problem.
  We can open Special features and change network setting on Windows. I  set my current IPv4 parameter, and again stop network connection flow  service.
 
  Hooray, everything should go smoothly from here on out) But this is win11 **![:D](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)**
+
+
+
+I was not able to boot after following these fantastic instructions. I had to go to Options to change the Boot Order.
+Original: Options > Boot Order > ide2, net0
+Modified: Options > Boot Order > virtio0, ide2, net0
