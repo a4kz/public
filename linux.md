@@ -168,3 +168,23 @@ export http_proxy=http://username:password@a.b.c.d:e/
 
 PermitRootLogin yes
 ```
+
+### debian 
+
+```
+deb https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+
+deb https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+
+deb https://deb.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
+
+deb https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+
+deb https://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
+# deb-src https://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
+```
+
