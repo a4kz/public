@@ -188,3 +188,13 @@ deb https://security.debian.org/debian-security/ bookworm-security contrib main 
 # deb-src https://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
 ```
 
+### dietpi
+
+```
+# set a proxy
+# .bashrc
+# 在/etc/environment 中设置不起作用
+export http_proxy="http://a.b.c.d:e/"
+epxort https_proxy="http://a.b.c.d:e/"
+```
+
