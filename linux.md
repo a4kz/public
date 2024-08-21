@@ -198,3 +198,8 @@ export http_proxy="http://a.b.c.d:e/"
 epxort https_proxy="http://a.b.c.d:e/"
 ```
 
+```
+# .bashrc	中设置时间 ???
+export TZ="AAA/BBB"
+```
+
