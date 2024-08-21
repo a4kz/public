@@ -31,7 +31,9 @@ ZSH_THEME="mortalscumbag"
 ```
 source ~/.oh-my-zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
-
+```
+source ~/.zshrc
+```
 ### Debian / Ubuntu修改主机名
 
 ```
