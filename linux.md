@@ -56,7 +56,18 @@ net.ipv6.conf.lo.disable_ipv6 = 1
 sudo sysctl -p
 ```
 
+### Ubuntu / Debian 允许 root ssh 登录
 
+```
+# /etc/ssh/sshd_config
+
+PermitRootLogin yes
+PasswordAuthentication yes
+```
+
+```
+systemctl restart sshd
+```
 
 ### 安装 docker
 
