@@ -1,5 +1,36 @@
 ### 安装 oh-my-zsh / linux 和 mac都适用
 __如果系统时间不正确，那么 apt 将无法更新__
+
+### Debian设置系统级别的代理：[参考文章](https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/)
+
+```
+vi /etc/profile.d/proxy.sh
+```
+
+```
+export http_proxy="http://A.B.C.D:E/"
+export https_proxy="http://A.B.C.D:E/"
+export ftp_proxy="http://A.B.C.D:E/"
+export no_proxy="127.0.0.1,localhost"
+```
+
+```
+chmod +x /etc/profile.d/proxy.sh
+```
+
+```
+logout
+```
+#### 将以下语句加入 `~/.zshrc`
+```
+source /etc/profile.d/proxy.sh
+```
+#### 确认查看代理是否起作用
+```
+env | grep -i proxy
+```
+
+
 ```
 apt update
 ```
@@ -83,6 +114,9 @@ curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 mkdir /etc/systemd/system/docker.service.d
 ```
 #### 创建文件 `/etc/systemd/system/docker.service.d/http-proxy.conf `
+
+#### 如果前面设置了系统级的代理，此次就不必再设置代理
+
 ```
 [Service]
 Environment="HTTP_PROXY=http://proxy.example.com:80/"
@@ -97,7 +131,7 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
-### 设置代理 `/etc/environment`
+### 设置代理 `/etc/environment` Debian不起作用
 
 ```
 export http_proxy="http://a.b.c.d:e/"
@@ -120,34 +154,6 @@ timedatectl list-timezones | grep AAA
 timedatectl set-timezone AAA/XYZ
 ```
 
-### Debian设置系统级别的代理：[参考文章](https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/)
-
-```
-vi /etc/profile.d/proxy.sh
-```
-
-```
-export http_proxy="http://A.B.C.D:E/"
-export https_proxy="http://A.B.C.D:E/"
-export ftp_proxy="http://A.B.C.D:E/"
-export no_proxy="127.0.0.1,localhost"
-```
-
-```
-chmod +x /etc/profile.d/proxy.sh
-```
-
-```
-logout
-```
-
-```
-source /etc/profile.d/proxy.sh
-```
-#### 确认查看代理是否起作用
-```
-env | grep -i proxy
-```
 
 
 
