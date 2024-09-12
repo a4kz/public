@@ -28,6 +28,8 @@ vi ~/.zshrc
 ```
 ZSH_THEME="mortalscumbag"
 ```
+
+#### 写到 `~/.zshrc`
 ```
 source ~/.oh-my-zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
@@ -90,15 +92,10 @@ Environment="NO_PROXY=localhost,127.0.0.0/8,docker-registry.somecorporation.com"
 ```
 systemctl daemon-reload
 ```
-```
-systemctl show --property Environment docker
-```
 
 ```
 systemctl restart docker
 ```
-
-
 
 ### 设置代理 `/etc/environment`
 
@@ -123,15 +120,52 @@ timedatectl list-timezones | grep AAA
 timedatectl set-timezone AAA/XYZ
 ```
 
+### Debian设置系统级别的代理：[参考文章](https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/)
+
+```
+vi /etc/profile.d/proxy.sh
+```
+
+```
+export http_proxy="http://A.B.C.D:E/"
+export https_proxy="http://A.B.C.D:E/"
+export ftp_proxy="http://A.B.C.D:E/"
+export no_proxy="127.0.0.1,localhost"
+```
+
+```
+chmod +x /etc/profile.d/proxy.sh
+```
+
+```
+logout
+```
+
+```
+source /etc/profile.d/proxy.sh
+```
+#### 确认查看代理是否起作用
+```
+env | grep -i proxy
+```
+
+
+
 ### CasaOS
 
 ```
-wget -qO- https://get.casaos.io | sudo bash
+wget -qO- https://get.casaos.io | bash
 ```
 
 ```
 casaos-uninstall
 ```
+#### update
+```
+curl -fsSL https://get.casaos.io/update |  bash
+```
+
+
 
 ### Debian ipv4 自动消失问题的解决
 

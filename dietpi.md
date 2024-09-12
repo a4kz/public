@@ -15,3 +15,4 @@ iface enp3s0 inet dhcp
     hwaddress ether 00:11:22:33:44:55
 ```
 
+### 使用 `dietpi-config`配置，不要 `apt upgrade`升级！	
