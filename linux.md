@@ -21,10 +21,26 @@ chmod +x /etc/profile.d/proxy.sh
 ```
 logout
 ```
-#### 将以下语句加入 `~/.zshrc`
+### debian 12 sources.list: /etc/apt/sources.list
+
 ```
-source /etc/profile.d/proxy.sh
+deb https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+
+deb https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+
+deb https://deb.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
+
+deb https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+# deb-src https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+
+deb https://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
+# deb-src https://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
 ```
+
+
 #### 确认查看代理是否起作用
 ```
 env | grep -i proxy
@@ -56,6 +72,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/zsh-auto
 ```
 vi ~/.zshrc
 ```
+
+
 ```
 ZSH_THEME="mortalscumbag"
 ```
@@ -64,6 +82,10 @@ ZSH_THEME="mortalscumbag"
 ```
 source ~/.oh-my-zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
+```
+source /etc/profile.d/proxy.sh
+```
+#### 退出 `~/.zshrc`后
 ```
 source ~/.zshrc
 ```
@@ -108,14 +130,12 @@ systemctl restart sshd
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 ```
 
-### 设置 docker 代理
+### 设置 docker 代理: 如果前面设置了系统级的代理，此次就不必再设置代理
 
 ```
 mkdir /etc/systemd/system/docker.service.d
 ```
 #### 创建文件 `/etc/systemd/system/docker.service.d/http-proxy.conf `
-
-#### 如果前面设置了系统级的代理，此次就不必再设置代理
 
 ```
 [Service]
@@ -222,24 +242,6 @@ export http_proxy=http://username:password@a.b.c.d:e/
 PermitRootLogin yes
 ```
 
-### debian 12 sources.list
-
-```
-deb https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
-# deb-src https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
-
-deb https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
-# deb-src https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
-
-deb https://deb.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
-# deb-src https://deb.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
-
-deb https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
-# deb-src https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
-
-deb https://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
-# deb-src https://security.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
-```
 
 ### dietpi
 
