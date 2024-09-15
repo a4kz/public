@@ -130,7 +130,7 @@ systemctl restart sshd
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 ```
 
-### 设置 docker 代理: 如果前面设置了系统级的代理，此次就不必再设置代理
+### 设置 docker 代理: 即使前面设置了系统级的代理，此处docker还是需要设置
 
 ```
 mkdir /etc/systemd/system/docker.service.d
@@ -258,3 +258,33 @@ epxort https_proxy="http://a.b.c.d:e/"
 export TZ="AAA/BBB"
 ```
 
+### PVE
+
+#### 安装 istoreos
+- 上传 img
+
+- 创建虚拟机
+
+- 不使用任何介质
+
+- SCSI控制器：VirtIO SCSI
+
+- 删除 磁盘
+
+- CPU: host
+
+- 内存：2048
+
+- 网络：VirtIO
+
+- 启动后输入
+
+  ```
+  qm importdisk [istore-id] /var/lib/vz/template/iso/iStoreOS.img local-lvm
+  ```
+  
+- 硬件 -> 点开 未使用的磁盘 -> 添加
+
+- 选项 -> 引导顺序 -> 只对 scsi0 打勾
+
+- 设置成静态ip后 reboot 
