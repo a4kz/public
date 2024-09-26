@@ -209,6 +209,8 @@ gateway 192.168.1.1
 dns-nameservers 1.1.1.1
 ```
 
+#### /etc/config/network 如果不对，需要修改这个位置的文件
+
 __保存并退出后：__
 
 ```
@@ -259,6 +261,12 @@ export TZ="AAA/BBB"
 ```
 
 ### PVE
+#### /etc/default/grub
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"
+```
+
+
 
 #### 安装 istoreos
 - 上传 img
