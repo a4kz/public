@@ -296,3 +296,28 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"
 - 选项 -> 引导顺序 -> 只对 scsi0 打勾
 
 - 设置成静态ip后 reboot 
+
+### macOS禁用 ipv6
+
+```
+sudo networksetup -listallnetworkservices
+```
+
+```
+sudo networksetup -setv6off Wi-Fi
+```
+
+```
+sudo networksetup -setv6off Ethernet
+```
+
+#### 重新启用 ipv6
+
+```
+sudo networksetup -setv6automatic Wi-Fi
+```
+
+```
+sudo networksetup -setv6automatic Ethernet
+```
+
