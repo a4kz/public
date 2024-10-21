@@ -321,3 +321,15 @@ sudo networksetup -setv6automatic Wi-Fi
 sudo networksetup -setv6automatic Ethernet
 ```
 
+#### npm proxy
+
+
+##### For HTTP:
+```
+npm config set proxy http://proxy_host:port
+```
+
+##### For HTTPS:
+```
+npm config set https-proxy http://proxy.company.com:8080
+```
