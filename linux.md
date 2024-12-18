@@ -333,3 +333,10 @@ npm config set proxy http://proxy_host:port
 ```
 npm config set https-proxy http://proxy.company.com:8080
 ```
+
+### 定位大文件位置
+
+```
+sudo du -sh /path/to/large/file/* | sort -rh | head -n 10
+```
+
