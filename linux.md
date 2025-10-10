@@ -1,4 +1,15 @@
 ### 安装 oh-my-zsh / linux 和 mac都适用
+
+```
+apt install zsh
+```
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+
+
 __如果系统时间不正确，那么 apt 将无法更新__
 
 ### Debian设置系统级别的代理：[参考文章](https://computingforgeeks.com/how-to-set-system-proxy-on-debian-linux/)
