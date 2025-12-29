@@ -20,3 +20,7 @@
   - 上下分屏：`Alt + Shift + -`
   - 取消分屏：`Ctrl + Shift + w`
   - `Ctrl + Alt + t` / `Ctrl + shift + n` 打开新终端窗口
+  - `Ctrl + shift + 1` 新建标签
+  - `Ctrl + shift + w` 关闭当前标签
+  - `Alt + 方向键` 分屏切换
+  - `Alt + Shift + 方向键` 调整分屏大小
